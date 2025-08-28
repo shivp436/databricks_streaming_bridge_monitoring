@@ -1,0 +1,18 @@
+resources:
+  pipelines:
+    pipeline_bridge_monitoring_dlt_pipeline:
+      name: bridge_monitoring_dlt_pipeline
+      libraries:
+        - notebook:
+            path: /Users/shivp436@shivp436az1gmail.onmicrosoft.com/bridge_monitoring_project/02_silver_processing
+        - notebook:
+            path: /Users/shivp436@shivp436az1gmail.onmicrosoft.com/bridge_monitoring_project/01_bronze_processing
+        - notebook:
+            path: /Users/shivp436@shivp436az1gmail.onmicrosoft.com/bridge_monitoring_project/03_gold_processing
+      schema: default
+      continuous: true
+      development: true
+      photon: true
+      catalog: bridge_monitoring
+      serverless: true
+      
